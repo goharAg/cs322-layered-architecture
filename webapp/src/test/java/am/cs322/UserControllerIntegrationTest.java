@@ -1,7 +1,9 @@
 package am.cs322;
 
-import am.cs322.model.CreateUserRequest;
-import am.cs322.model.UserDTO;
+import am.cs322.user.business.api.UserService;
+import am.cs322.user.presentation.api.model.CreateUserRequest;
+import am.cs322.user.domain.model.UserDTO;
+import am.cs322.user.presentation.api.UserController;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
