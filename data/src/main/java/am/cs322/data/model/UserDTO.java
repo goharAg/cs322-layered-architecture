@@ -1,4 +1,4 @@
-package am.cs322.user.domain.model;
+package am.cs322.data.model;
 
 public record UserDTO(String fullName) {
 }

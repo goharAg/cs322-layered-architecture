@@ -2,9 +2,8 @@ package am.cs322.bank.presentation.impl;
 
 
 import am.cs322.bank.business.impl.BankAccountService;
-import am.cs322.bank.domain.model.BankAccount;
 import am.cs322.bank.presentation.api.model.CreateBankAccountRequest;
-import am.cs322.user.domain.model.User;
+import am.cs322.data.model.BankAccount;
 import java.math.BigDecimal;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

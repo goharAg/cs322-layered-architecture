@@ -1,10 +1,11 @@
 package am.cs322.bank.business.impl;
 
 import am.cs322.bank.business.api.BankService;
-import am.cs322.bank.data.BankAccountRepository;
-import am.cs322.bank.domain.model.BankAccount;
-import am.cs322.user.data.UserRepository;
-import am.cs322.user.domain.model.User;
+
+import am.cs322.data.BankAccountRepository;
+import am.cs322.data.UserRepository;
+import am.cs322.data.model.BankAccount;
+import am.cs322.data.model.User;
 import jakarta.transaction.Transactional;
 import java.math.BigDecimal;
 import org.springframework.stereotype.Service;
@@ -29,7 +30,7 @@ public class BankAccountService implements BankService {
       return null;
     }
     BankAccount bankAccount = new BankAccount();
-    bankAccount.setUser(user);
+    bankAccount.setUserId(userId);
     bankAccount.setAccountNumber(accountNumber);
     bankAccount.setBalance(initialBalance);
     bankAccount.setAccountType(accountType);

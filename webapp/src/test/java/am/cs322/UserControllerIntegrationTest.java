@@ -2,7 +2,6 @@ package am.cs322;
 
 import am.cs322.user.business.api.UserService;
 import am.cs322.user.presentation.api.model.CreateUserRequest;
-import am.cs322.user.domain.model.UserDTO;
 import am.cs322.user.presentation.api.UserController;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +11,8 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
+import am.cs322.data.model.UserDTO;
+
 
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;

@@ -1,13 +1,9 @@
-package am.cs322.bank.domain.model;
+package am.cs322.data.model;
 
-import am.cs322.user.domain.model.User;
 import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import java.math.BigDecimal;
 import java.util.Objects;
@@ -20,9 +16,8 @@ public class BankAccount {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
-  @ManyToOne(fetch = FetchType.LAZY)
-  @JoinColumn(name = "user_id")
-  private User user;
+
+  private Long userId;
 
   private String accountNumber;
   private BigDecimal balance;
@@ -32,8 +27,8 @@ public class BankAccount {
 
   }
 
-  public BankAccount(User user, String accountNumber, BigDecimal balance, String accountType){
-    this.user = user;
+  public BankAccount(Long userId, String accountNumber, BigDecimal balance, String accountType){
+    this.userId = userId;
     this.accountNumber =  accountNumber;
     this.balance = balance;
     this.accountType = accountType;
@@ -56,12 +51,12 @@ public class BankAccount {
     this.id = id;
   }
 
-  public User getUser() {
-    return user;
+  public Long getUserId() {
+    return userId;
   }
 
-  public void setUser(User user) {
-    this.user = user;
+  public void setUserId(Long userId) {
+    this.userId = userId;
   }
 
   public String getAccountNumber() {
@@ -86,14 +81,14 @@ public class BankAccount {
     if (o == null || getClass() != o.getClass()) return false;
     BankAccount that = (BankAccount) o;
     return Objects.equals(id, that.id) &&
-           Objects.equals(user, that.user) &&
+           Objects.equals(userId, that.userId) &&
            Objects.equals(accountNumber, that.accountNumber) &&
            Objects.equals(balance, that.balance);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, user, accountNumber, balance);
+    return Objects.hash(id, userId, accountNumber, balance);
   }
 
 }

@@ -1,9 +1,9 @@
 package am.cs322.user.business.impl;
 
+import am.cs322.data.UserRepository;
+import am.cs322.data.model.User;
+import am.cs322.data.model.UserDTO;
 import am.cs322.user.business.api.UserService;
-import am.cs322.user.data.UserRepository;
-import am.cs322.user.domain.model.User;
-import am.cs322.user.domain.model.UserDTO;
 import org.springframework.stereotype.Service;
 
 @Service

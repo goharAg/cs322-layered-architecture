@@ -1,7 +1,7 @@
-package am.cs322.user.data;
+package am.cs322.data;
 
 
-import am.cs322.user.domain.model.User;
+import am.cs322.data.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

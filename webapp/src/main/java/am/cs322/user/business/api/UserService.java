@@ -1,7 +1,6 @@
 package am.cs322.user.business.api;
 
-
-import am.cs322.user.domain.model.UserDTO;
+import am.cs322.data.model.UserDTO;
 
 public interface UserService {
 

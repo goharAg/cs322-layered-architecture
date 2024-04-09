@@ -2,4 +2,5 @@ rootProject.name = 'cs322-homework'
 
 include 'bankapp'
 include 'webapp'
+include 'data'
 
